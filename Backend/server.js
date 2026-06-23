@@ -27,14 +27,6 @@ const connectDB = async () => {
 };
 
 
-
-
-
-
-
-
-
-
 // app.post("/test", async (req, res) => {
 //   const options = {
 //     method: "POST",
