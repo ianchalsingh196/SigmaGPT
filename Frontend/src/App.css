@@ -14,7 +14,7 @@ html, body {
 
 .app {
     background-color: #212121;
-    display: flex; /* Keeps Sidebar on left and ChatWindow on right */
+    display: flex; 
     flex-direction: row;
     width: 100vw;
     height: 100vh;
