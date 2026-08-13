@@ -7,16 +7,16 @@ function ChatWindow() {
     <div className="chatWindow">
       <div className="navbar">
           <span className='brand-select'>
-            SigmaGPT <i className="fa-solid fa-chevron-down"></i></span>
+            SigmaGPT<i className="fa-solid fa-chevron-down"></i></span>
           <div className="userIconDiv">
-            <span><i className="fa-solid fa-user"></i></span>
+            <span className='userIcon'><i className="fa-solid fa-user"></i></span>
           </div>
       </div>
       <Chat></Chat>
 
       <div className="chatInput">
-        <div className="userInput">
-          <input type="text" placeholder='Ask Anything'></input>
+        <div className="inputBox">
+          <input placeholder='Ask Anything'></input>
           <div id='submit'><i className="fa-solid fa-paper-plane"></i></div>
         </div>
         <p className='info'>
