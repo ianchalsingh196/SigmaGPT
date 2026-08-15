@@ -63,11 +63,14 @@ router.delete("/threads/:threadId", async (req, res) => {
 //Add a message to a specific thread
 router.post("/chat", async (req, res) => {
     const { threadId, message } = req.body;
+
     if(!threadId || !message) {
         return res.status(400).json({ error: "Thread ID and message are required" });
     }
     try {
-        const thread = await Thread.findOne({ threadId });
+        let thread = await Thread.findOne({ threadId });
+
+        //create a new thread in Db
         if (!thread) {
             thread = new Thread ({
                 threadId,
