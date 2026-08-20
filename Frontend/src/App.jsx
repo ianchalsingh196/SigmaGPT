@@ -8,7 +8,7 @@ import {v1 as uuid} from "uuid";
 function App() {
   const [prompt, setPrompt] = useState("");
   const [reply, setReply] = useState(null);
-  const [currThreadId, setCurrThreadId] = useState(uuidv1());
+  const [currThreadId, setCurrThreadId] = useState(uuid());
 
 
 

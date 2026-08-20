@@ -31,8 +31,6 @@ function ChatWindow() {
     setLoading(false);
   }
 
-
-
   return (
     <div className="chatWindow">
       <div className="navbar">
