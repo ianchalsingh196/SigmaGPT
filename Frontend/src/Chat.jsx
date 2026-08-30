@@ -9,12 +9,25 @@ function Chat() {
     <>
       {newChat && <h1> Start a new Chat!</h1>}
       <div className="chats">
-        <div className="userDiv">
+        {
+          prevChats?.map((chat, idx) => 
+            <div className={chat.role === 'user' ? "userDiv" : "gptDiv"} key={idx}>
+              {
+                chat.role === "user" ? 
+                <p className='userMessage'>{chat.content}</p> : 
+                <p className='gptMessage'>{chat.content}</p>
+              }
+
+            </div>
+          )
+        }
+
+        {/* <div className="userDiv">
           <p className='userMessage'> User Message</p>
         </div>
         <div className="gptDiv">
           <p className='gptMessage'>GPT Generated Message</p>
-        </div>
+        </div> */}
       </div>
     
     </>
